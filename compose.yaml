@@ -1,0 +1,10 @@
+services:
+  notes-api:
+    build: ./be
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - notes_data:/app/db
+
+volumes:
+  notes_data:

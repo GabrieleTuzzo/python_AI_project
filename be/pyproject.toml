@@ -1,0 +1,28 @@
+[project]
+name = "be"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Gabriele Tuzzo", email = "gabriele.tuzzo@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.165.0",
+    "mcp[cli]>=2.3.0",
+    "ollama>=0.6.3",
+    "pydantic>=2.14.4",
+    "rich>=15.0.0",
+]
+
+[project.scripts]
+be = "be:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
